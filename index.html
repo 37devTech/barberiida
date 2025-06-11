@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbershop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        height: 95vh;
+      }
+
+      .header-photo,
+      .header-about {
+        flex: 1 1 50%;
+        min-height: 300px;
+      }
+
+      .header-photo {
+        background: url("IMG_4973.png") center/cover no-repeat;
+      }
+
+      .header-about {
+        background-color: #2e2e2e;
+        color: #fff;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .header-about .tagline {
+        font-size: 0.9rem;
+        color: #ccc;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      .header-about h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .header-about .lead {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        max-width: 500px;
+      }
+
+      .header-about a.btn {
+        background-color: #e0b400;
+        color: #000;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .header-about a.btn:hover {
+        background-color: #cfa500;
+      }
+
+      section {
+        padding: 2rem 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      #menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      #menu li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .map-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Default 16:9 ratio */
+        height: 0;
+        overflow: hidden;
+        margin: 2rem 0;
+      }
+
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* Media Query for Small Screens */
+      @media (max-width: 600px) {
+        .map-container {
+          padding-bottom: 75%; /* Taller ratio for better visibility on small screens */
+          margin: 1rem 0;
+        }
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+        }
+
+        .header-about {
+          padding: 2rem 1.5rem;
+          text-align: center;
+          align-items: center;
+        }
+
+        .header-about .lead {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-photo"></div>
+      <div class="header-about">
+        <small class="tagline">Since 1957 • 鵠沼海岸</small>
+        <h1>ようこそ Barber Iida へ。</h1>
+        <p class="lead">
+          2世代に渡り地域に密着したアットホームな理髪店。<br />
+          昔ながらの技術と丁寧なサービスで、<br />
+          お客様のスタイルを大切に仕上げます。
+        </p>
+        <p>皆さまのご来店を心よりお待ちしております。</p>
+        <a href="#contact" class="btn">ご予約・アクセス</a>
+      </div>
+    </header>
+
+    <section id="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><span>調髪</span><span>3,500円</span></li>
+        <li><span>洗髪</span><span>2,000円</span></li>
+        <li><span>顔剃</span><span>2,000円</span></li>
+        <li><span>女性顔剃</span><span>2,500円</span></li>
+        <li><span>シャンプーのみ</span><span>1,700円</span></li>
+        <li><span>中学生</span><span>1,700円</span></li>
+        <li><span>シャンプーのみ</span><span>2,500円</span></li>
+        <li><span>小学生</span><span>2,000円</span></li>
+        <li><span>丸刈</span><span>2,000円</span></li>
+        <li><span>白髪染</span><span>5,500円</span></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📞 0466-34-4595</p>
+      <br />
+      <p>
+        <b>営業時間 </b><br />
+        8:30-18:30 <br />
+        定休日 毎週火曜日、第2月曜日<br />
+      </p>
+      <p style="margin-top: 2rem">
+        📍 〒 251-0037 藤沢市 鵠沼海岸 2－10－30<br />
+      </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.438852917318!2d139.46657677486252!3d35.319922249738745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60184e42e6ad33bd%3A0x2016c922fa79b4ce!2s2-ch%C5%8Dme-10-30%20Kugenumakaigan%2C%20Fujisawa%2C%20Kanagawa%20251-0037!5e0!3m2!1sen!2sjp!4v1749613559513!5m2!1sen!2sjp"
+          width="1000"
+          height="600"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Barber Iida. All rights reserved.</p>
+      <p>
+        Managed by
+        <a href="https://neilhumphrey.dev/" target="_blank">Neil Humphrey</a>
+      </p>
+    </footer>
+  </body>
+</html>
